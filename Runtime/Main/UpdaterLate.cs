@@ -5,11 +5,6 @@ namespace Dythervin.Updater.Main
 {
     public sealed class UpdaterLate : UpdaterBase<UpdaterLate, IUpdatableLate, IUpdatableLateDelta>
     {
-        private void LateUpdate()
-        {
-            Update(Time.deltaTime);
-        }
-
         protected override void ForEach(float deltaTime)
         {
             foreach (var updatable in values)

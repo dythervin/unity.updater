@@ -5,11 +5,6 @@ namespace Dythervin.Updater.Main
 {
     public sealed class UpdaterFixed : UpdaterBase<UpdaterFixed, IUpdatableFixed, IUpdatableFixedDelta>
     {
-        private void FixedUpdate()
-        {
-            Update(Time.fixedDeltaTime);
-        }
-
         protected override void ForEach(float deltaTime)
         {
             foreach (var updatable in values)
