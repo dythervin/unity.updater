@@ -1,11 +1,9 @@
 ﻿using System;
 using Dythervin.Collections;
 using Dythervin.Core.Utils;
-#if ODIN_INSPECTOR
 using Sirenix.OdinInspector;
-#endif
 
-namespace Dythervin.Updater.Main
+namespace Dythervin.Updaters.Main
 {
     public abstract class UpdaterBase<TUpdater, TElement, TElementDelta> : Singleton<TUpdater>
         where TUpdater : Singleton<TUpdater>, new()

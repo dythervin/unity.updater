@@ -1,6 +1,6 @@
-﻿using Dythervin.Updater.Main;
+﻿using Dythervin.Updaters.Main;
 
-namespace Dythervin.Updater
+namespace Dythervin.Updaters
 {
     public static class UpdatablesExt
     {

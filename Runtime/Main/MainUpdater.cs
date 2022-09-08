@@ -1,7 +1,7 @@
 ﻿using Dythervin.Core.Utils;
 using UnityEngine;
 
-namespace Dythervin.Updater.Main
+namespace Dythervin.Updaters.Main
 {
     internal class MainUpdater : MonoBehaviour
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Dythervin.Updater.Main
+namespace Dythervin.Updaters.Main
 {
     public sealed class UpdaterFixed : UpdaterBase<UpdaterFixed, IUpdatableFixed, IUpdatableFixedDelta>
     {

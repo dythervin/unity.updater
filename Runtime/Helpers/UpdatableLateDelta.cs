@@ -1,6 +1,6 @@
 using System;
 
-namespace Dythervin.Updater.Helpers
+namespace Dythervin.Updaters.Helpers
 {
     public class UpdatableLateDelta : IUpdatableLateDelta, IUpdatableListenerDelta
     {

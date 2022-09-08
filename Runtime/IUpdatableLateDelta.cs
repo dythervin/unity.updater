@@ -1,4 +1,4 @@
-namespace Dythervin.Updater
+namespace Dythervin.Updaters
 {
     public interface IUpdatableLateDelta : IUpdatableBase
     {
