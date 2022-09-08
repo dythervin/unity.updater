@@ -20,7 +20,7 @@ namespace Dythervin.Updaters.Main
             UpdaterLate.Instance.Update(Time.deltaTime);
         }
 
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void InitStatic()
         {
             GameObject gameObject = PersistentRoot.Get("MainUpdater");
