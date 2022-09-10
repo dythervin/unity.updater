@@ -11,7 +11,7 @@ namespace Dythervin.Updaters.Main
             {
                 try
                 {
-                    if (!values.ToRemove(updatable))
+                    if (!values.IsToRemove(updatable))
                         updatable.OnUpdate();
                 }
                 catch (Exception e)
@@ -24,7 +24,7 @@ namespace Dythervin.Updaters.Main
             {
                 try
                 {
-                    if (!valuesDelta.ToRemove(updatable))
+                    if (!valuesDelta.IsToRemove(updatable))
                         updatable.OnUpdate(deltaTime);
                 }
                 catch (Exception e)
