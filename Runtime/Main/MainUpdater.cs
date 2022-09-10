@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace Dythervin.Updaters.Main
 {
+    [AddComponentMenu("")]
     internal class MainUpdater : MonoBehaviour
     {
         private void Update()
