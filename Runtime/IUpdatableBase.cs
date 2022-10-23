@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Dythervin.Updaters
+namespace Dythervin.UpdateSystem
 {
     public interface IUpdatableBase { }
 

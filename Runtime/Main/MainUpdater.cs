@@ -1,31 +1,41 @@
 ﻿using Dythervin.Core.Utils;
 using UnityEngine;
 
-namespace Dythervin.Updaters.Main
+namespace Dythervin.UpdateSystem.Main
 {
-    [AddComponentMenu("")]
-    internal class MainUpdater : MonoBehaviour
+    public static class MainUpdater
     {
-        private void Update()
+        private static MainUpdaterInternal _mainUpdaterInternal;
+
+        public static bool AutoUpdaterEnabled
         {
-            Updater.Instance.Update(Time.deltaTime);
+            get => _mainUpdaterInternal.enabled;
+            set => _mainUpdaterInternal.enabled = value;
         }
 
-        private void FixedUpdate()
+        ///Shorthand for Updater.Instance.Update(deltaTime);
+        public static void Update(float deltaTime)
         {
-            UpdaterFixed.Instance.Update(Time.fixedDeltaTime);
+            Updater.Instance.Update(deltaTime);
         }
 
-        private void LateUpdate()
+        ///Shorthand for UpdaterFixed.Instance.Update(deltaTime);
+        public static void FixedUpdate(float deltaTime)
         {
-            UpdaterLate.Instance.Update(Time.deltaTime);
+            UpdaterFixed.Instance.Update(deltaTime);
+        }
+
+        ///Shorthand for UpdaterLate.Instance.Update(deltaTime);
+        public static void LateUpdate(float deltaTime)
+        {
+            UpdaterLate.Instance.Update(deltaTime);
         }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void InitStatic()
         {
             GameObject gameObject = PersistentRoot.Get("MainUpdater");
-            gameObject.AddComponent<MainUpdater>();
+            _mainUpdaterInternal = gameObject.AddComponent<MainUpdaterInternal>();
             gameObject.hideFlags = HideFlags.NotEditable;
         }
     }

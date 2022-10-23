@@ -3,10 +3,10 @@ using Dythervin.Collections;
 using Dythervin.Core.Utils;
 using Sirenix.OdinInspector;
 
-namespace Dythervin.Updaters.Main
+namespace Dythervin.UpdateSystem.Main
 {
-    public abstract class UpdaterBase<TUpdater, TElement, TElementDelta> : Singleton<TUpdater>
-        where TUpdater : Singleton<TUpdater>, new()
+    public abstract class UpdaterBase<TUpdater, TElement, TElementDelta> : Singleton<TUpdater>, IUpdater
+        where TUpdater : UpdaterBase<TUpdater, TElement, TElementDelta>, new()
     {
         public event Action<float> OnUpdateDelta;
         public event Action OnUpdate;

@@ -1,5 +1,5 @@
 ﻿{
-  "name": "Dythervin.Updaters",
-  "rootNamespace": "Dythervin.Updaters",
+  "name": "Dythervin.UpdateSystem",
+  "rootNamespace": "Dythervin.UpdateSystem",
   "references":[ "GUID:0d2722be3221441990b3d439a49d3d00", "GUID:0031e864adfd431f8c8176db3609a3cb" ]
 }

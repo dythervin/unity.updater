@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Dythervin.Updaters.Main
+namespace Dythervin.UpdateSystem.Main
 {
     public sealed class UpdaterLate : UpdaterBase<UpdaterLate, IUpdatableLate, IUpdatableLateDelta>
     {
