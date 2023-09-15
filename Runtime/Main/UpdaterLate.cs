@@ -16,7 +16,7 @@ namespace Dythervin.UpdateSystem.Main
                 }
                 catch (Exception e)
                 {
-                    DLogger.LogError(e);
+                    DDebug.LogError(e);
                 }
             }
         }
@@ -31,7 +31,7 @@ namespace Dythervin.UpdateSystem.Main
                 }
                 catch (Exception e)
                 {
-                    DLogger.LogError(e);
+                    DDebug.LogError(e);
                 }
             }
         }

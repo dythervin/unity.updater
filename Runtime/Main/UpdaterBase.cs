@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Dythervin.Collections;
-using Dythervin.Core.Utils;
+using Dythervin.Core;
 using Dythervin.ObjectPool;
 #if ODIN_INSPECTOR && UNITY_EDITOR
 using Sirenix.OdinInspector;
@@ -56,15 +56,15 @@ namespace Dythervin.UpdateSystem.Main
             if (_onUpdateOnce.Count == 0)
                 return;
 
-            using var temp = _onUpdateOnce.ToPooledArray();
+            using var temp = _onUpdateOnce.ToTempArray();
             foreach (Action action in temp)
             {
                 action.Invoke();
             }
+
             _onUpdateOnce.Clear();
         }
     }
-
 
     public abstract class UpdaterBase<TUpdater, TElement, TElementDelta> : UpdaterBase<TUpdater, TElement>
         where TUpdater : UpdaterBase<TUpdater, TElement, TElementDelta>, new()

@@ -1,10 +1,10 @@
-﻿using Dythervin.Core.Utils;
+﻿using Dythervin.Core;
 using UnityEngine;
 
 namespace Dythervin.UpdateSystem.Main
 {
     [AddComponentMenu("")]
-    internal class MainUpdaterInternal : MonoSingleton<MainUpdaterInternal>
+    internal class MainUpdaterInternal : SingletonMono<IMainUpdaterInternal, MainUpdaterInternal>, IMainUpdaterInternal
     {
         private void Update()
         {
@@ -22,5 +22,9 @@ namespace Dythervin.UpdateSystem.Main
         {
             UpdaterLate.Instance.Update(Time.deltaTime);
         }
+    }
+
+    internal interface IMainUpdaterInternal
+    {
     }
 }

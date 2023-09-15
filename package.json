@@ -1,6 +1,6 @@
 {
   "name": "com.dythervin.unity.updaters",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "unity": "2020.3",
   "unityRelease": "0f1",
   "keywords": [],
@@ -11,8 +11,8 @@
   },
   "displayName": "updater",
   "dependencies": {
-    "com.dythervin.unity.core": "1.0.2",
-    "com.dythervin.unity.collections": "1.0.2",
-    "com.dythervin.unity.object-pool" : "1.0.2"
+    "com.dythervin.unity.core": "1.0.3",
+    "com.dythervin.unity.collections": "1.0.3",
+    "com.dythervin.unity.object-pool" : "1.0.3"
   }
 }

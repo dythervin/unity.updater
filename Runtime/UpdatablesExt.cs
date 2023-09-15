@@ -2,28 +2,27 @@
 
 namespace Dythervin.UpdateSystem
 {
-    public static class UpdatablesExt
+    public static partial class UpdatablesExt
     {
         public static void SetUpdater(this IUpdatable updatable, bool value)
         {
-            Main.Updater.Instance.Set(updatable, value);
+            Updater.Instance.Set(updatable, value);
         }
 
         public static bool GetUpdater(this IUpdatableDelta updatable)
         {
-            return Main.Updater.Instance.Contains(updatable);
+            return Updater.Instance.Contains(updatable);
         }
 
         public static bool GetUpdater(this IUpdatable updatable)
         {
-            return Main.Updater.Instance.Contains(updatable);
+            return Updater.Instance.Contains(updatable);
         }
 
         public static bool GetFixedUpdater(this IUpdatableFixed updatable)
         {
             return UpdaterFixed.Instance.Contains(updatable);
         }
-
 
         public static bool GetLateUpdater(this IUpdatableLate updatable)
         {
@@ -37,17 +36,17 @@ namespace Dythervin.UpdateSystem
 
         public static void SetUpdater(this IUpdatableDelta updatable, bool value)
         {
-            Main.Updater.Instance.Set(updatable, value);
+            Updater.Instance.Set(updatable, value);
         }
 
         public static bool GetUpdatableInterval(this IUpdatableInterval updatable)
         {
-            return Main.UpdaterInterval.Instance.Contains(updatable);
+            return UpdaterInterval.Instance.Contains(updatable);
         }
 
         public static void SetUpdatableInterval(this IUpdatableInterval updatable, bool value)
         {
-            Main.UpdaterInterval.Instance.Set(updatable, value);
+            UpdaterInterval.Instance.Set(updatable, value);
         }
 
         public static bool GetFixedUpdater(this IUpdatableFixedDelta updatable)
@@ -69,7 +68,6 @@ namespace Dythervin.UpdateSystem
         {
             UpdaterLate.Instance.Set(updatable, value);
         }
-
 
         public static void SetLateUpdater(this IUpdatableLateDelta updatable, bool value)
         {
